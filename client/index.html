@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Back End Assessment</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="mw6 center bg-white br3 pa3 pa4-ns ba b--black-10 serif">
+    <h1 class="f4 tc">Backend Buttons</h1>
+    <hr class="mw3 bb bw1 b--black-10" />
+
+    <div class="flex flex-wrap">
+      <div class="button w-100 pa2">
+        <!-- 
+        Compliement Button, request to backend to get a random compliment.
+       -->
+
+        <button
+          id="complimentButton"
+          class="w-100 grow no-underline br-pill ba ph3 pv2 mb2 mid-gray"
+        >
+          Get a compliment
+        </button>
+      </div>
+
+      <!-- 
+        Fortune Button, request to backend to get a random fortune.
+        DB is setup as a JSON file as an array
+       -->
+
+      <div class="button w-100 pa2">
+        <button
+          id="fortuneButton"
+          class="w-100 grow no-underline br-pill ba ph3 pv2 mb2 mid-gray"
+        >
+          Get a fortune
+        </button>
+      </div>
+
+      <!-- 
+        Dad Joke Button - API request to an API to receive a dad joke.
+        Setup to replace the text each click.
+       -->
+
+      <div class="button w-100 pa2">
+        <button
+          id="dadJokeButton"
+          class="w-100 grow no-underline br-pill ba ph3 pv2 mb2 mid-gray"
+        >
+          Get a dad joke
+        </button>
+        <p class="jokeDisplay i"></p>
+      </div>
+
+      <!-- 
+        To Do List
+        Post method to add new item to the list to backend server.  
+        Get method used to get the current list from backend.
+        Put method to mark the item as done by updating the list text.
+        Delete method to remove the item from the backend server. Using X button.  
+       -->
+
+      <div class="button w-100 pa2">
+        <input
+          class="w-100 mb1"
+          type="text"
+          id="toDo"
+          placeholder="What do you need to do today?"
+        />
+        <button
+          id="addToDo"
+          class="w-100 grow no-underline br-pill ba ph3 pv2 mb2 mid-gray"
+        >
+          Add to to do
+        </button>
+        <p class="theList"></p>
+      </div>
+
+      <!-- 
+        Fortune Button, request to backend to get a 3 random words for positive reinforcement.
+        It takes the name input to say in a third person...
+        DB is setup as a JSON file as an array
+       -->
+
+      <div class="button w-100 pa2">
+        <input
+          class="w-100 mb1"
+          type="text"
+          id="name"
+          placeholder="What is your name?"
+        />
+        <button
+          id="describeMe"
+          class="w-100 grow no-underline br-pill ba ph3 pv2 mb2 mid-gray"
+        >
+          Describe Me
+        </button>
+        <p class="describeMe i b"></p>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
